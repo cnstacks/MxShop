@@ -42,10 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'DjangoUeditor',
-    'users',
-    'user_operation',
-    'trade',
-    'goods',
+    'users.apps.UsersConfig',
+    'user_operation.apps.UserOperationConfig',
+    'trade.apps.TradeConfig',
+    'goods.apps.GoodsConfig',
 ]
 
 MIDDLEWARE = [
