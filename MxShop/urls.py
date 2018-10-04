@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from django.contrib import admin
+#from django.contrib import admin
 import xadmin
 from MxShop.settings import MEDIA_ROOT
 from django.views.static import serve
@@ -25,7 +25,7 @@ from goods.views import GoodsListViewSet
 
 router = DefaultRouter()
 # 配置goods的url；
-router.register(r'goods', GoodsListViewSet)
+router.register(r'goods', GoodsListViewSet,base_name="goods")
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
